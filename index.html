@@ -8,7 +8,7 @@
   <meta property="og:title" content="stack.pub — A visual portfolio for your newsletter" />
   <meta property="og:description" content="Your posts. Your photos. One link. Launching soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sora:wght@500;600&family=Newsreader:ital,wght@1,400&family=Bebas+Neue&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { background: #fafaf8; }
@@ -40,7 +40,7 @@
       max-width: 600px; margin: 0 auto; padding: 100px 24px 0; text-align: center;
     }
     .hero h1 {
-      font-family: 'Fraunces', serif; font-weight: 600;
+      font-family: 'Lora', serif; font-weight: 600;
       font-size: clamp(32px, 6vw, 52px); line-height: 1.1; letter-spacing: -0.03em;
       color: #111; margin-bottom: 20px;
     }
@@ -92,7 +92,7 @@
       justify-content: center; margin: 0 auto 12px;
     }
     .form-success h3 {
-      font-family: 'Fraunces', serif; font-weight: 600; font-size: 20px;
+      font-family: 'Lora', serif; font-weight: 600; font-size: 20px;
       margin-bottom: 4px; color: #1a1a1a;
     }
     .form-success p { font-size: 14px; color: #777; }
@@ -112,11 +112,70 @@
     .feature-text h4 { font-weight: 600; font-size: 15px; color: #1a1a1a; margin-bottom: 3px; }
     .feature-text p { font-size: 14px; color: #888; line-height: 1.55; }
 
+    /* ── Three styles showcase ── */
+    .styles-section {
+      max-width: 600px; margin: 80px auto 0; padding: 0 24px;
+    }
+    .styles-label {
+      text-align: center; font-size: 13px; font-weight: 500;
+      color: #bbb; letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .styles-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    .style-demo {
+      border-radius: 10px; overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    .style-demo .preview-inner {
+      aspect-ratio: 3/4; position: relative; overflow: hidden;
+      container-type: inline-size;
+    }
+    .style-demo .dbg {
+      position: absolute; inset: 0;
+      background: linear-gradient(145deg, #4a90a4 0%, #2d7a8e 40%, #1a5c6e 100%);
+    }
+    .style-demo .dbg::after {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse at 50% 70%, rgba(180,220,230,0.25) 0%, transparent 50%);
+    }
+    .sd-broadsheet .ov {
+      position:absolute; inset:0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.04) 35%, transparent 100%);
+      display:flex; align-items:flex-start; padding:7cqi;
+    }
+    .sd-broadsheet .ov span {
+      font-family:'Sora',sans-serif; font-weight:600; font-size:8.5cqi; color:#fff; line-height:1.06; letter-spacing:-0.02em;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+    .sd-byline .ov {
+      position:absolute; inset:0;
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.08) 40%, transparent 100%);
+      display:flex; align-items:flex-end; justify-content:center; padding:7cqi; text-align:center;
+    }
+    .sd-byline .ov span {
+      font-family:'Newsreader',serif; font-weight:400; font-size:11cqi; font-style:italic; color:#fff; line-height:1.1;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+    }
+    .sd-billboard .ov {
+      position:absolute; inset:0;
+      display:flex; align-items:center; justify-content:center; text-align:center; padding:6cqi;
+    }
+    .sd-billboard .ov span {
+      font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:16cqi; color:rgba(255,255,255,0.7);
+      text-transform:uppercase; line-height:0.92; letter-spacing:0.03em;
+    }
+    .style-name {
+      text-align: center; padding: 10px; font-weight: 600; font-size: 13px;
+      color: #1a1a1a; background: #fff;
+    }
+
     .bottom-cta {
       max-width: 480px; margin: 80px auto 0; padding: 0 24px; text-align: center;
     }
     .bottom-cta h2 {
-      font-family: 'Fraunces', serif; font-weight: 600; font-size: 24px;
+      font-family: 'Lora', serif; font-weight: 600; font-size: 24px;
       letter-spacing: -0.02em; margin-bottom: 8px; color: #111;
     }
     .bottom-cta p { font-size: 15px; color: #888; margin-bottom: 24px; }
@@ -189,6 +248,25 @@
       <div class="feature-text">
         <h4>Updates automatically</h4>
         <p>Publish a new story and your grid updates. No logins, no maintenance, no code.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Three styles -->
+  <div class="styles-section">
+    <p class="styles-label">Three card styles to choose from</p>
+    <div class="styles-row">
+      <div class="style-demo">
+        <div class="preview-inner sd-broadsheet"><div class="dbg"></div><div class="ov"><span>Your article title appears here</span></div></div>
+        <div class="style-name">Broadsheet</div>
+      </div>
+      <div class="style-demo">
+        <div class="preview-inner sd-byline"><div class="dbg"></div><div class="ov"><span>Your article title appears here</span></div></div>
+        <div class="style-name">Byline</div>
+      </div>
+      <div class="style-demo">
+        <div class="preview-inner sd-billboard"><div class="dbg"></div><div class="ov"><span>Your article title appears here</span></div></div>
+        <div class="style-name">Billboard</div>
       </div>
     </div>
   </div>
