@@ -37,7 +37,7 @@
     .topbar-name { font-weight: 700; font-size: 18px; letter-spacing: -0.02em; color: #1a1a1a; }
 
     .hero {
-      max-width: 600px; margin: 0 auto; padding: 100px 24px 0; text-align: center;
+      max-width: 600px; margin: 0 auto; padding: 80px 24px 0; text-align: center;
     }
     .hero h1 {
       font-family: 'Lora', serif; font-weight: 600;
@@ -45,11 +45,11 @@
       color: #111; margin-bottom: 20px;
     }
     .hero h1 em {
-      font-style: italic; font-weight: 300; color: #888;
+      font-style: italic; font-weight: 400; color: #888;
     }
     .hero p {
       font-size: 18px; color: #777; line-height: 1.65;
-      max-width: 440px; margin: 0 auto 44px;
+      max-width: 440px; margin: 0 auto 40px;
     }
 
     .form-wrap {
@@ -97,26 +97,26 @@
     }
     .form-success p { font-size: 14px; color: #777; }
 
-    .divider { width: 40px; height: 1px; background: #e0e0e0; margin: 80px auto; }
-
+    /* ── Features ── */
     .features {
-      max-width: 480px; margin: 0 auto; padding: 0 24px;
-      display: flex; flex-direction: column; gap: 28px;
+      max-width: 480px; margin: 56px auto 0; padding: 0 24px;
+      display: flex; flex-direction: column; gap: 24px;
     }
-    .feature { display: flex; gap: 16px; align-items: flex-start; }
+    .feature { display: flex; gap: 14px; align-items: flex-start; }
     .feature-icon {
-      min-width: 36px; height: 36px; border-radius: 10px;
+      min-width: 34px; height: 34px; border-radius: 9px;
       background: #f0eeeb; display: flex; align-items: center; justify-content: center;
-      font-size: 16px; flex-shrink: 0;
+      flex-shrink: 0;
     }
+    .feature-icon svg { width: 16px; height: 16px; stroke: #666; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
     .feature-text h4 { font-weight: 600; font-size: 15px; color: #1a1a1a; margin-bottom: 3px; }
     .feature-text p { font-size: 14px; color: #888; line-height: 1.55; }
 
-    /* ── Three styles showcase ── */
+    /* ── Three styles ── */
     .styles-section {
-      max-width: 600px; margin: 80px auto 0; padding: 0 24px;
+      max-width: 600px; margin: 64px auto 0; padding: 0 24px;
     }
-    .styles-label {
+    .section-label {
       text-align: center; font-size: 13px; font-weight: 500;
       color: #bbb; letter-spacing: 0.06em; text-transform: uppercase;
       margin-bottom: 20px;
@@ -142,25 +142,26 @@
     }
     .sd-broadsheet .ov {
       position:absolute; inset:0;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.04) 35%, transparent 100%);
+      background: linear-gradient(to bottom, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 25%, rgba(0,0,0,0.12) 50%, transparent 100%);
       display:flex; align-items:flex-start; padding:7cqi;
     }
     .sd-broadsheet .ov span {
-      font-family:'Sora',sans-serif; font-weight:600; font-size:8.5cqi; color:#fff; line-height:1.06; letter-spacing:-0.02em;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      font-family:'Sora',sans-serif; font-weight:600; font-size:8.5cqi; color:#fff; line-height:1.1;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.5);
     }
     .sd-byline .ov {
       position:absolute; inset:0;
-      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.08) 40%, transparent 100%);
+      background: linear-gradient(to top, rgba(0,0,0,0.62) 0%, rgba(0,0,0,0.35) 25%, rgba(0,0,0,0.12) 50%, transparent 100%);
       display:flex; align-items:flex-end; justify-content:center; padding:7cqi; text-align:center;
     }
     .sd-byline .ov span {
       font-family:'Newsreader',serif; font-weight:400; font-size:11cqi; font-style:italic; color:#fff; line-height:1.1;
-      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      text-shadow: 0 1px 3px rgba(0,0,0,0.7), 0 2px 10px rgba(0,0,0,0.5);
     }
     .sd-billboard .ov {
       position:absolute; inset:0;
       display:flex; align-items:center; justify-content:center; text-align:center; padding:6cqi;
+      background: rgba(0,0,0,0.18);
     }
     .sd-billboard .ov span {
       font-family:'Bebas Neue',sans-serif; font-weight:400; font-size:16cqi; color:rgba(255,255,255,0.7);
@@ -171,8 +172,22 @@
       color: #1a1a1a; background: #fff;
     }
 
+    /* ── Product screenshots ── */
+    .screenshots-section {
+      max-width: 700px; margin: 64px auto 0; padding: 0 24px;
+    }
+    .screenshots-row {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    }
+    @media (max-width: 520px) { .screenshots-row { gap: 10px; } }
+    .screenshots-row img {
+      width: 100%; border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.1);
+    }
+
+    /* ── Bottom CTA ── */
     .bottom-cta {
-      max-width: 480px; margin: 80px auto 0; padding: 0 24px; text-align: center;
+      max-width: 480px; margin: 64px auto 0; padding: 0 24px; text-align: center;
     }
     .bottom-cta h2 {
       font-family: 'Lora', serif; font-weight: 600; font-size: 24px;
@@ -181,7 +196,7 @@
     .bottom-cta p { font-size: 15px; color: #888; margin-bottom: 24px; }
 
     .footer {
-      text-align: center; padding: 64px 24px 40px;
+      text-align: center; padding: 56px 24px 40px;
       font-size: 12px; color: #ccc;
     }
   </style>
@@ -219,32 +234,39 @@
     </div>
   </div>
 
-  <div class="divider"></div>
-
+  <!-- Features -->
   <div class="features anim anim-d5">
     <div class="feature">
-      <div class="feature-icon">&#9889;</div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+      </div>
       <div class="feature-text">
         <h4>Paste your URL and go</h4>
         <p>We pull your posts, cover images, and links automatically. No uploading, no setup.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="feature-icon">&#128279;</div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      </div>
       <div class="feature-text">
         <h4>One link for everything</h4>
         <p>Put stack.pub/yourname in your Instagram bio, email signature, or media kit.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="feature-icon">&#128200;</div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </div>
       <div class="feature-text">
-        <h4>Built-in UTM tracking</h4>
-        <p>Every tap back to your publication is tracked so you can see it in your dashboard.</p>
+        <h4>Track every click</h4>
+        <p>Every tap back to your publication is tracked so you can see the traffic in your dashboard.</p>
       </div>
     </div>
     <div class="feature">
-      <div class="feature-icon">&#8635;</div>
+      <div class="feature-icon">
+        <svg viewBox="0 0 24 24"><path d="M23 4v6h-6"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/></svg>
+      </div>
       <div class="feature-text">
         <h4>Updates automatically</h4>
         <p>Publish a new story and your grid updates. No logins, no maintenance, no code.</p>
@@ -252,9 +274,9 @@
     </div>
   </div>
 
-  <!-- Three styles -->
+  <!-- Three card styles -->
   <div class="styles-section">
-    <p class="styles-label">Three card styles to choose from</p>
+    <p class="section-label">Three card styles to choose from</p>
     <div class="styles-row">
       <div class="style-demo">
         <div class="preview-inner sd-broadsheet"><div class="dbg"></div><div class="ov"><span>Your article title appears here</span></div></div>
@@ -271,6 +293,18 @@
     </div>
   </div>
 
+  <!-- Product screenshots -->
+  <div class="screenshots-section">
+    <p class="section-label">See it in action</p>
+    <div class="screenshots-row">
+      <!-- Replace these src values with your actual screenshot URLs -->
+      <img src="YOUR_SCREENSHOT_1_URL" alt="Broadsheet style example" />
+      <img src="YOUR_SCREENSHOT_2_URL" alt="Byline style example" />
+      <img src="YOUR_SCREENSHOT_3_URL" alt="Billboard style example" />
+    </div>
+  </div>
+
+  <!-- Bottom CTA -->
   <div class="bottom-cta">
     <h2>Get early access</h2>
     <p>We're opening stack.pub to a small group of beta testers first.</p>
